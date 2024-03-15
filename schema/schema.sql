@@ -8,7 +8,7 @@ CREATE TABLE tasks (
   description VARCHAR(100) NOT NULL,
 
   location_id INT(11) NOT NULL,
-
+  status enum('complete','incomplete') NOT NULL DEFAULT 'incomplete',
   FOREIGN KEY(location_id) REFERENCES locations(id) ON DELETE CASCADE
 ) ENGINE=INNODB;
 
